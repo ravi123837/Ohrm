@@ -1,0 +1,5 @@
+package ohrm_login;
+
+public class Login_Credentials {
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [newtoursuser Registration]">
+  <test name="register">
+    <classes>
+      <class name="com.Datadrivenapproachframework.NewTours_register_functionality"/>
+    </classes>
+  </test> <!-- register -->
+  <test name="newuserregistration">
+    <classes>
+      <class name="com.Datadrivenapproachframework.NewTours_register_functionality"/>
+    </classes>
+  </test> <!-- newuserregistration -->
+  <test name="register(failed)">
+    <classes>
+      <class name="com.Datadrivenapproachframework.NewTours_register_functionality">
+        <methods>
+          <include name="newuserregistration"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="register"/>
+        </methods>
+      </class> <!-- com.Datadrivenapproachframework.NewTours_register_functionality -->
+    </classes>
+  </test> <!-- register(failed) -->
+  <test name="newuserregistration(failed)">
+    <classes>
+      <class name="com.Datadrivenapproachframework.NewTours_register_functionality">
+        <methods>
+          <include name="newuserregistration"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.Datadrivenapproachframework.NewTours_register_functionality -->
+    </classes>
+  </test> <!-- newuserregistration(failed) -->
+</suite> <!-- Failed suite [newtoursuser Registration] -->

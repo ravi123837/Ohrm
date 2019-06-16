@@ -1,0 +1,10 @@
+Feature:OrangeHRM application login functionality Testing
+Scenario Outline:validating login functionality
+Givenopen chrome browser and navigate to orangeHRM application
+WhenUser enters valid"<Username>"and"<Password>"and click on signin button then the user should be able to successfully login to orangeHRM application and close
+Then User should be able to successfully login to orangeHRM application and close
+
+Examples:
+  |Username |Password|
+  |admin|Password|
+  |Hello|password|

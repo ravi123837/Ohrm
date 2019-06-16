@@ -1,0 +1,35 @@
+package com.StepDefination;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+
+public class Valid_Invalid_credentials {
+
+	WebDriver driver=null;
+	String url="https://opensource-demo.orangehrmlive.com/";
+
+
+@Given("^open chrome browser and navigate to orangeHRM application$")
+public void open_chrome_browser_and_navigate_to_orangeHRM_application() throws Throwable {
+	System.setProperty("webdriver.chrome.driver", ".//Drivers/chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.get(url);
+    
+}
+
+@When("^User enters valid\"([^\"]*)\"and\"([^\"]*)\"and click on signin button then the user should be able to successfully login to orangeHRM application and close$")
+public void User_enters_valid_and_and_click_on_signin_button_then_the_user_should_be_able_to_successfully_login_to_orangeHRM_application_and_close(String arg1, String arg2) throws Throwable {
+  
+	
+	driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+	driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+	driver.findElement(By.id("btnLogin")).click();
+}
+
+
+
+}

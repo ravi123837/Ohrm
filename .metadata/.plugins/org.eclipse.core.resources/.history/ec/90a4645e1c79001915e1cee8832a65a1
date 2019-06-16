@@ -1,0 +1,26 @@
+package visible_links;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ORHMS_HeaderBlock_Elementscount_displayNames {
+
+	public static void main(String[] args) {
+		
+	
+		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe" );
+		WebDriver driver=null;
+		 String url="https://opensource-demo.orangehrmlive.com/";
+		 driver=new ChromeDriver();
+		 driver.get(url);
+		 
+WebElement.headedblock=driver.findElement(By.className("menu"));
+
+//class="menu"
+list<webElement>headerblock links=headerblo
+
+	}
+
+}

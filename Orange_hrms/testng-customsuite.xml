@@ -1,0 +1,8 @@
+
+<suite name="Default suite">
+  <test  name="Default test">
+    <classes>
+      <class name="com.Datadrivenapproachframework.New_tours_login_Test"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

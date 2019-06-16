@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="78081" started-at="2019-06-07T05:40:27Z" finished-at="2019-06-07T05:41:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="78081" started-at="2019-06-07T05:40:27Z" finished-at="2019-06-07T05:41:45Z">
+      <class name="com.Datadriven.Datadriven_Keyword_Ohrms">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.Datadriven.Datadriven_Keyword_Ohrms@725bef66]" name="setup" is-config="true" duration-ms="60030" started-at="2019-06-07T07:40:27Z" finished-at="2019-06-07T07:41:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginfunctionality()[pri:0, instance:com.Datadriven.Datadriven_Keyword_Ohrms@725bef66]" name="loginfunctionality" duration-ms="18024" started-at="2019-06-07T07:41:27Z" finished-at="2019-06-07T07:41:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginfunctionality -->
+      </class> <!-- com.Datadriven.Datadriven_Keyword_Ohrms -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

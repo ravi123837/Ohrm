@@ -1,0 +1,71 @@
+package com.StepDefination;
+
+import java.io.File;
+import java.sql.Driver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.sun.jna.platform.FileUtils;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class OHRM_Login_Functionality_Testing {
+	
+	WebDriver driver=null;
+	String url="https://opensource-demo.orangehrmlive.com/";
+	
+
+		@Given("^opens firefox browser and navigate to OrangeHRM application$")
+		public void opens_firefox_browser_and_navigate_to_OrangeHRM_application()  {
+			System.setProperty("webdriver.chrome.driver", ".//Drivers/chromedriver.exe");
+			driver=new ChromeDriver();
+			driver.get(url);
+		    
+		}
+
+		@When("^user enters valid UserName and Password and click on signin button$")
+		public void user_enters_valid_UserName_and_Password_and_click_on_signin_button()  {
+			
+			driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+			driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+			driver.findElement(By.id("btnLogin")).click();
+		}
+
+		@Then("^User should be able to successfully login to orangeHRM application and close$")
+		public void User_should_be_able_to_successfully_login_to_orangeHRM_application_and_close() {
+			
+			try {
+				
+				String expected_text="Welcome Admin";
+				System.out.println("the expected text is:"+expected_text);
+				
+				String actual_text=driver.findElement(By.id("welcome")).getText();
+				System.out.println("the actual text is"+actual_text);
+				
+				if(actual_text.contains(expected_text))
+				{
+					System.out.println("successfully login-PASS");
+				}
+			}
+		  catch(Exception e)
+			{
+			  if(driver.findElement(By.id("spanMessage")).getText().equals("Invalid credentials"))
+					  {
+				  
+				  System.out.println("login failed_FAIL");
+				  driver.quit();
+				  
+				  
+			  }
+			}
+		}
+
+
+}

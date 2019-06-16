@@ -1,0 +1,9 @@
+Feature:OrangeHRM application login functionality testing
+Scenario Outline:validating login functionality
+Given open firefox browser and navigate to orangeHRm application
+When user enters valid"<Username>"and"<Password>"and click on sigin button
+Then User should be able to successfully login to OrangeHRM application and close
+Examples:
+|UserName|Password|
+|admin|password|
+|hello|password| 

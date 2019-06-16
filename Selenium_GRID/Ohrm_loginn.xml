@@ -1,0 +1,15 @@
+<suite name="OrangeHRM Application">
+<test name="on firefox">
+<parameter name="Browser" value="firefox"/>
+<classes>
+<class name= "com.GRID. OrangeHRM_LOginTest"/>
+</classes>
+</test>
+
+<test name="on chrome">
+<parameter name="Browser" value="chrome"/>
+<classess>
+<class name="com.GRID. OrangeHRM_LOginTest"/>
+</classess>
+</test>
+</suite>

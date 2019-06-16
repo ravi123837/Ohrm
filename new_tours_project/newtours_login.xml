@@ -1,0 +1,8 @@
+
+<suite name="com.Datadrivenapproachframework">
+  <test  name="  loginNewtours  ">
+    <classes>
+      <class name="com.Datadrivenapproachframework.Keyword"/>
+    </classes>
+  </test> 
+</suite> 
